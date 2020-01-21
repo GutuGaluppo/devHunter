@@ -6,9 +6,29 @@ import Profile from './pages/Profile';
 
 const Routes = createAppContainer(
     createStackNavigator({
-        Main,
-        Profile,
-    })
+        Main:{
+            screen: Main,
+            navigationOptions:{
+                title:'Dev Hunter'
+            },
+        },
+        Profile: {
+            screen: Profile,
+            navigationOptions:{
+                title: 'Github Profile'
+            }
+        },   
+    }, {
+        defaultNavigationOptions:{
+            headerTintColor: '#FFF',
+            headerBackTitleVisible: false,
+            headerStyle:{
+                backgroundColor: '#7D40E7',
+            },
+
+        }
+    }
+    )
 );
 
 export default Routes;
